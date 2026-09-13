@@ -2,9 +2,59 @@
 .env
 .env.*
 !.env.example
+.envrc
+.direnv/
+.secrets/
+secrets/
 
-# Local runtime artifacts
+# Credential files and private keys
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.kubeconfig
+kubeconfig
+.netrc
+.npmrc
+.pypirc
+credentials*.json
+*-credentials.json
+*service-account*.json
+
+# Cloud and infrastructure state (may contain credentials or sensitive outputs)
+.aws/
+.aliyun/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# Local-only configuration and overrides
+config/local*
+config/*local*
+docker-compose.override.yml
+
+# Logs, dumps, and local runtime artifacts
+*.log
+*.log.*
+*.dump
+*.sql.gz
 __pycache__/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .venv/
+venv/
 node_modules/
+coverage/
+.coverage
+
+# OS and editor metadata
+.DS_Store
+.idea/
+.vscode/
